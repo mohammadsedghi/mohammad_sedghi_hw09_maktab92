@@ -28,7 +28,7 @@ Product[] products=new Product[5];
         for (int i = 0; i < products.length ; i++) {
             Product product=arrayUtil.findProduct(products[i]);
             System.out.println(product);
-            System.out.println();
+
         }
 
     }
