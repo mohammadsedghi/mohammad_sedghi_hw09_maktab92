@@ -1,24 +1,16 @@
 package entity.base;
 
-public class ElectronicDevice {
-    Long id;
+public class ElectronicDevice extends BaseEntity {
+
     String name;
     int voltage;
     double UnitPrice;
 
-    public ElectronicDevice(Long id, String name, int voltage, double unitPrice) {
-        this.id = id;
+    public ElectronicDevice(long id,String name, int voltage, double unitPrice) {
+        super(id);
         this.name = name;
         this.voltage = voltage;
         UnitPrice = unitPrice;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -44,5 +36,6 @@ public class ElectronicDevice {
     public void setUnitPrice(double unitPrice) {
         UnitPrice = unitPrice;
     }
+
 
 }
