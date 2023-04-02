@@ -1,4 +1,4 @@
-package entity;
+package ir.maktab92.onlineshop.domain;
 
 public class Address {
    private String province;

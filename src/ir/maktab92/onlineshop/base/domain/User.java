@@ -1,19 +1,22 @@
-package entity;
+package ir.maktab92.onlineshop.base.domain;
 
-public class User {
+import ir.maktab92.onlineshop.domain.Address;
+
+public class User extends Entity {
     private String name;
     private String family;
     private String phoneNumber;
     private String  emailAddress;
-    private  String passWord;
-    private  Address address;
+    private  String password;
+    private Address address;
 
-    public User(String name, String family, String phoneNumber, String emailAddress, String passWord, Address address) {
+    public User(long id,String name, String family, String phoneNumber, String emailAddress, String passWord, Address address) {
+        super(id);
         this.name = name;
         this.family = family;
         this.phoneNumber = phoneNumber;
         this.emailAddress = emailAddress;
-        this.passWord = passWord;
+        this.password = passWord;
         this.address = address;
     }
 
@@ -52,12 +55,12 @@ public class User {
         this.emailAddress = emailAddress;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Address getAddress() {
@@ -75,7 +78,7 @@ public class User {
                 ", family='" + family + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
-                ", passWord='" + passWord + '\'' +
+                ", passWord='" + password + '\'' +
                 ", address=" + address +
                 '}';
     }
