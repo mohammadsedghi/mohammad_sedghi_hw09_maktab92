@@ -1,12 +1,12 @@
 package entity;
 
 public class User {
-    String name;
-    String family;
-    String phoneNumber;
-    String  emailAddress;
-    String passWord;
-    Address address;
+    private String name;
+    private String family;
+    private String phoneNumber;
+    private String  emailAddress;
+    private  String passWord;
+    private  Address address;
 
     public User(String name, String family, String phoneNumber, String emailAddress, String passWord, Address address) {
         this.name = name;
