@@ -36,7 +36,13 @@ public class ElectronicDevice extends Product {
         this.voltage = voltage;
     }
 
-
+    @Override
+    public String toString() {
+        return "ElectronicDevice{" +
+                "name='" + name + '\'' +
+                ", voltage=" + voltage +
+                "} " + super.toString();
+    }
 }
 
 
