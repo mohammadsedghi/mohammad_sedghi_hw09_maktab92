@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class ProductRepository {
     Database database = new Database();
+
     public void saveProduct(Product product) {
         Product[] products = new Product[5];
         if (product instanceof Tv) {
@@ -23,10 +24,14 @@ public class ProductRepository {
 
     }
 
-    public Product[] loadAll() {
+    public Product[] loadAll(Product product) {
         Product[] products;
-        products = database.getTvs();
-        return products;
+        if (product instanceof Tv) {
+            products = database.getTvs();
+            return products;
+        }
+        // TODO OTHER TYPE
+        return null;
     }
 
 }

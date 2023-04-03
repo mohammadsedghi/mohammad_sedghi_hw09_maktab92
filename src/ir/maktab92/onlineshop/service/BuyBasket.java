@@ -1,18 +1,38 @@
 package ir.maktab92.onlineshop.service;
 
 import ir.maktab92.onlineshop.base.domain.Product;
+import ir.maktab92.onlineshop.domain.Tv;
+import ir.maktab92.onlineshop.repository.Database;
 import ir.maktab92.onlineshop.util.ArrayUtil;
 
 public class BuyBasket {
 
-Product[] products=new Product[5];
-    public void addProduct(Product product) {
-        for (int i = 0; i < products.length; i++) {
-            if (products[products.length - 1] != null)
-                System.out.println("you can not add any product to your Buy basket");
-            else
-                products[i] = product;
+    Product[] products = new Product[5];
+    Database database = new Database();
+
+    public Product setIdProduct(long id) {
+        Product product = new Product();
+        product.setId(id);
+        return product;
+    }
+
+    public Product addProduct(Product product) {
+        for (int i = 0; i < 5; i++) {
+            if(products[i]==null) {
+                for (int j = 0; j < 5; j++) {
+                    if (product.getId() == database.getTvs()[j].getId()) {
+                        products[i] = database.getTvs()[j];
+                        database.getTvs()[j] = null;
+                        System.out.println("added to buyBasket");
+                        System.out.println("you can only select " + (5 - (i + 1)) + "product");
+                        System.out.println("number of your basket product is " + (i + 1));
+                        return products[i];
+                    }
+                }
+            }
         }
+        System.out.println("your product is not found");
+        return null;
     }
 
     public void removeProduct(Product product) {
@@ -24,11 +44,10 @@ Product[] products=new Product[5];
     }
 
     public void printBuyBasket() {
-        ArrayUtil arrayUtil=new ArrayUtil();
-        for (int i = 0; i < products.length ; i++) {
-            Product product=arrayUtil.findProduct(products[i]);
-            System.out.println(product);
 
+        for (Product p:products
+             ) {
+            System.out.println(p);
         }
 
     }
@@ -40,7 +59,7 @@ Product[] products=new Product[5];
                 totalPrice += products[i].getUnitPrice();
             }
         }
-        System.out.println("total price is:"+totalPrice);
+        System.out.println("total price is:" + totalPrice);
     }
 
 
