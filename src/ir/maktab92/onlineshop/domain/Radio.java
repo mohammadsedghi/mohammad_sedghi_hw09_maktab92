@@ -11,6 +11,9 @@ public class Radio extends ElectronicDevice {
         this.receivedWaves=receivedWaves;
     }
 
+    public Radio() {
+    }
+
     public String getTypeOfSearch() {
         return typeOfSearch;
     }
@@ -25,5 +28,14 @@ public class Radio extends ElectronicDevice {
 
     public void setReceivedWaves(String receivedWaves) {
         this.receivedWaves = receivedWaves;
+    }
+
+    @Override
+    public String toString() {
+        return "Radio{" +
+                "typeOfSearch='" + typeOfSearch + '\'' +
+                ", receivedWaves='" + receivedWaves + '\'' +
+                ", id=" + id +
+                "} " + super.toString();
     }
 }
