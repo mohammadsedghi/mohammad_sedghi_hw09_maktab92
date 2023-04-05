@@ -19,6 +19,7 @@ public class StudyThing extends Product {
         this.name = name;
         this.authorNameFamily = authorNameFamily;
     }
+    public StudyThing(){}
 
     public int getNumber() {
         return Number;
