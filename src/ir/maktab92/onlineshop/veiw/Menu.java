@@ -6,10 +6,11 @@ import java.util.Scanner;
 
 import ir.maktab92.onlineshop.service.BuyBasket;
 import ir.maktab92.onlineshop.service.ShowProduct;
+import ir.maktab92.onlineshop.util.MyException;
 
 public class Menu {
 
-    public void showMenu() {
+    public void showMenu() throws MyException{
         while (true) {
             System.out.println("#######################################");
             System.out.println("Menu:1-show product");
@@ -25,7 +26,7 @@ public class Menu {
         }
     }
 
-    public void runProgram() {
+    public void runProgram() throws MyException {
         BuyBasket buyBasket = new BuyBasket();
         Scanner scanner = new Scanner(System.in);
 
@@ -37,6 +38,7 @@ public class Menu {
             case 2:
                 System.out.println("inter your id of product: ");
                 buyBasket.addProduct(buyBasket.setIdProduct(scanner.nextLong()));
+                buyBasket.printBuyBasket();
                 break;
             case 3:
                 System.out.println("inter your id of product: ");
@@ -65,7 +67,7 @@ public class Menu {
 
     }
 
-    public void showLogInOrSignInMenu() {
+    public void showLogInOrSignInMenu() throws MyException {
         LogIn logIn=new LogIn();
         System.err.println("logIn=======OR=======SignIn");
         System.out.println("if you want logIn please inter 1 and if you want signIn please inter 2");

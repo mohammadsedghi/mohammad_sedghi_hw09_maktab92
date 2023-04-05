@@ -10,7 +10,7 @@ public class ProductRepository {
     Database database = new Database();
 
     public void saveProduct(Product product) {
-        Product[] products = new Product[5];
+        Product[]products=new Product[5];
         if (product instanceof Tv) {
             Tv[] tvs = new Tv[5];
             Tv tv = (Tv) product;
@@ -67,27 +67,23 @@ public class ProductRepository {
         }
 
 
-
     }
 
     public void saveOneProduct(Product product, Product[] products) {
 
         if (product instanceof Tv) {
-            Tv tv = (Tv) product;
             for (int i = 0; i < products.length; i++) {
                 if (products[i] == null) {
-                    products[i] = tv;
+                    products[i] = product;
                     break;
                 }
-
             }
             database.setTvs(((Tv[]) products));
         }
         if (product instanceof Radio) {
-            Radio radio = (Radio) product;
             for (int i = 0; i < products.length; i++) {
                 if (products[i] == null) {
-                    products[i] = radio;
+                    products[i] = product;
                     break;
                 }
 
@@ -95,10 +91,10 @@ public class ProductRepository {
             database.setRadios(((Radio[]) products));
         }
         if (product instanceof ShoeCollege) {
-            ShoeCollege shoeCollege = (ShoeCollege) product;
+
             for (int i = 0; i < products.length; i++) {
                 if (products[i] == null) {
-                    products[i] = shoeCollege;
+                    products[i] = product;
                     break;
                 }
 
@@ -106,10 +102,9 @@ public class ProductRepository {
             database.setShoeColleges(((ShoeCollege[]) products));
         }
         if (product instanceof ShoeSport) {
-            ShoeSport shoeSport = (ShoeSport) product;
             for (int i = 0; i < products.length; i++) {
                 if (products[i] == null) {
-                    products[i] = shoeSport;
+                    products[i] = product;
                     break;
                 }
 
@@ -117,10 +112,9 @@ public class ProductRepository {
             database.setShoeSports(((ShoeSport[]) products));
         }
         if (product instanceof Article) {
-            Article article = (Article) product;
             for (int i = 0; i < products.length; i++) {
                 if (products[i] == null) {
-                    products[i] = article;
+                    products[i] = product;
                     break;
                 }
 
@@ -128,10 +122,9 @@ public class ProductRepository {
             database.setArticles(((Article[]) products));
         }
         if (product instanceof Book) {
-            Book book = (Book) product;
             for (int i = 0; i < products.length; i++) {
                 if (products[i] == null) {
-                    products[i] = book;
+                    products[i] = product;
                     break;
                 }
 
@@ -142,6 +135,7 @@ public class ProductRepository {
     }
 
     public Product[] loadAll(Product product) {
+
         Product[] products;
         if (product instanceof Tv) {
             products = database.getTvs();
@@ -168,6 +162,6 @@ public class ProductRepository {
             return products;
         }
         return null;
-    }
+}
 
 }

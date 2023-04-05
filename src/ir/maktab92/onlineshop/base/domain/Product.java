@@ -16,4 +16,11 @@ public class Product extends Entity {
 
     public Product() {
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "UnitPrice=" + UnitPrice +
+                "} " + super.toString();
+    }
 }
