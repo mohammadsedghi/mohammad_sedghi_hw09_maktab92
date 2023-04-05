@@ -83,7 +83,61 @@ public class ProductRepository {
             }
             database.setTvs(((Tv[]) products));
         }
-        //TODO OTHER TYPE
+        if (product instanceof Radio) {
+            Radio radio = (Radio) product;
+            for (int i = 0; i < products.length; i++) {
+                if (products[i] == null) {
+                    products[i] = radio;
+                    break;
+                }
+
+            }
+            database.setRadios(((Radio[]) products));
+        }
+        if (product instanceof ShoeCollege) {
+            ShoeCollege shoeCollege = (ShoeCollege) product;
+            for (int i = 0; i < products.length; i++) {
+                if (products[i] == null) {
+                    products[i] = shoeCollege;
+                    break;
+                }
+
+            }
+            database.setShoeColleges(((ShoeCollege[]) products));
+        }
+        if (product instanceof ShoeSport) {
+            ShoeSport shoeSport = (ShoeSport) product;
+            for (int i = 0; i < products.length; i++) {
+                if (products[i] == null) {
+                    products[i] = shoeSport;
+                    break;
+                }
+
+            }
+            database.setShoeSports(((ShoeSport[]) products));
+        }
+        if (product instanceof Article) {
+            Article article = (Article) product;
+            for (int i = 0; i < products.length; i++) {
+                if (products[i] == null) {
+                    products[i] = article;
+                    break;
+                }
+
+            }
+            database.setArticles(((Article[]) products));
+        }
+        if (product instanceof Book) {
+            Book book = (Book) product;
+            for (int i = 0; i < products.length; i++) {
+                if (products[i] == null) {
+                    products[i] = book;
+                    break;
+                }
+
+            }
+            database.setBooks(((Book[]) products));
+        }
 
     }
 
@@ -93,7 +147,26 @@ public class ProductRepository {
             products = database.getTvs();
             return products;
         }
-        // TODO OTHER TYPE
+        if (product instanceof Radio) {
+            products = database.getRadios();
+            return products;
+        }
+        if (product instanceof ShoeCollege) {
+            products = database.getShoeColleges();
+            return products;
+        }
+        if (product instanceof ShoeSport) {
+            products = database.getShoeSports();
+            return products;
+        }
+        if (product instanceof Book) {
+            products = database.getBooks();
+            return products;
+        }
+        if (product instanceof Article) {
+            products = database.getArticles();
+            return products;
+        }
         return null;
     }
 
