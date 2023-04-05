@@ -7,9 +7,6 @@ import ir.maktab92.onlineshop.util.MyException;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class LogIn {
     long[] listId = new long[10];
     SignIn signIn = new SignIn();

@@ -3,9 +3,9 @@ package ir.maktab92.onlineshop.base.product;
 import ir.maktab92.onlineshop.base.domain.Product;
 
 public class StudyThing extends Product {
-    int Number;
-    String name;
-    String authorNameFamily;
+   protected int Number;
+   protected String name;
+   protected String authorNameFamily;
 
     public StudyThing(long id, double unitPrice, int number, String name, String authorNameFamily) {
         super(id, unitPrice);

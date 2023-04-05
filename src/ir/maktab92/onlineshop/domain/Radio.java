@@ -3,8 +3,8 @@ package ir.maktab92.onlineshop.domain;
 import ir.maktab92.onlineshop.base.product.ElectronicDevice;
 
 public class Radio extends ElectronicDevice {
-    String typeOfSearch;
-    String receivedWaves;
+    private String typeOfSearch;
+    private String receivedWaves;
     public Radio(Long id,double unitPrice, String name, int voltage,  String typeOfSearch,String receivedWaves ) {
         super(id,unitPrice, name, voltage);
         this.typeOfSearch=typeOfSearch;

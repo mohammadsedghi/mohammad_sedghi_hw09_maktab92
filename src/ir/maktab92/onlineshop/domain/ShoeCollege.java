@@ -3,8 +3,8 @@ package ir.maktab92.onlineshop.domain;
 import ir.maktab92.onlineshop.base.product.Shoes;
 
 public class ShoeCollege extends Shoes {
-    String metal;
-    boolean OrthopedicShoe;
+    private String metal;
+    private boolean OrthopedicShoe;
 
     public ShoeCollege(long id, double unitPrice, int size, String color, String metal, boolean orthopedicShoe) {
         super(id, unitPrice, size, color);

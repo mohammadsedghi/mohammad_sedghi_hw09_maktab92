@@ -3,8 +3,8 @@ package ir.maktab92.onlineshop.domain;
 import ir.maktab92.onlineshop.base.product.StudyThing;
 
 public class Book extends StudyThing {
- String subject;
- int printYear;
+ private String subject;
+ private int printYear;
 
     public Book(long id, double unitPrice, int number, String name, String authorNameFamily, String subject, int printYear) {
         super(id, unitPrice, number, name, authorNameFamily);

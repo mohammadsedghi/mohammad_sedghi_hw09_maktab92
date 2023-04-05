@@ -1,7 +1,6 @@
 package ir.maktab92.onlineshop.veiw;
 
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 import ir.maktab92.onlineshop.service.BuyBasket;
@@ -10,7 +9,7 @@ import ir.maktab92.onlineshop.util.MyException;
 
 public class Menu {
 
-    public void showMenu() throws MyException{
+    public void showMenu() throws MyException {
         while (true) {
             System.out.println("#######################################");
             System.out.println("Menu:1-show product");
@@ -50,15 +49,16 @@ public class Menu {
             case 5:
                 buyBasket.totalPriceBuyBasket();
                 break;
-            case 6:buyBasket.confirmBuyBasket();
-            break;
+            case 6:
+                buyBasket.confirmBuyBasket();
+                break;
             case 7:
                 System.out.println("you are sign out if you want exit from program please inter 0");
                 System.out.println("else if you want log in inter any number except zero");
                 int status = scanner.nextInt();
                 if (status == 0) System.exit(0);
                 else {
-                    LogIn logIn=new LogIn();
+                    LogIn logIn = new LogIn();
                     logIn.logIn();
                 }
 
@@ -68,7 +68,7 @@ public class Menu {
     }
 
     public void showLogInOrSignInMenu() throws MyException {
-        LogIn logIn=new LogIn();
+        LogIn logIn = new LogIn();
         System.err.println("logIn=======OR=======SignIn");
         System.out.println("if you want logIn please inter 1 and if you want signIn please inter 2");
         Scanner scanner = new Scanner(System.in);

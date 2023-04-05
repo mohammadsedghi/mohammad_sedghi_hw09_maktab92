@@ -3,8 +3,8 @@ package ir.maktab92.onlineshop.base.product;
 import ir.maktab92.onlineshop.base.domain.Product;
 
 public class Shoes extends Product {
-    int size;
-    String color;
+   protected int size;
+   protected String color;
 
     public Shoes(long id, double unitPrice, int size, String color) {
         super(id, unitPrice);

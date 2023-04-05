@@ -3,8 +3,8 @@ package ir.maktab92.onlineshop.domain;
 import ir.maktab92.onlineshop.base.product.StudyThing;
 
 public class Article extends StudyThing {
-   String title;
-   String keyWord;
+   private String title;
+   private String keyWord;
 
    public Article(long id, double unitPrice, int number, String name, String authorNameFamily, String title, String keyWord) {
       super(id, unitPrice, number, name, authorNameFamily);

@@ -3,8 +3,8 @@ package ir.maktab92.onlineshop.domain;
 import ir.maktab92.onlineshop.base.product.ElectronicDevice;
 
 public class Tv extends ElectronicDevice {
-    String description;
-    double screenSize;
+    private String description;
+    private double screenSize;
 
     public Tv(Long id,double uintPrice ,String name, int voltage,String description,double screenSize) {
         super(id,uintPrice, name, voltage);

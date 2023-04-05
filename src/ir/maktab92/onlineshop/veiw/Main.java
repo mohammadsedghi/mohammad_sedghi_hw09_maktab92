@@ -8,8 +8,7 @@ public class Main {
       ProductUtil productUtil =new ProductUtil();
       productUtil.createProduct();
       Menu menu=new Menu();
-       menu.showMenu();
-      // menu.showLogInOrSignInMenu();
+       menu.showLogInOrSignInMenu();
 
     }
 }
