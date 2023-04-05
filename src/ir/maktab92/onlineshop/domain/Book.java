@@ -22,7 +22,7 @@ public class Book extends StudyThing {
         this.subject = subject;
         this.printYear = printYear;
     }
-
+public Book(){}
     public String getSubject() {
         return subject;
     }

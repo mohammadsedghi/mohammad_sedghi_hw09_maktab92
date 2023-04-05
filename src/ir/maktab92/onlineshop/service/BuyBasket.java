@@ -1,10 +1,10 @@
 package ir.maktab92.onlineshop.service;
 
 import ir.maktab92.onlineshop.base.domain.Product;
-import ir.maktab92.onlineshop.domain.Tv;
+import ir.maktab92.onlineshop.domain.*;
 import ir.maktab92.onlineshop.repository.Database;
 import ir.maktab92.onlineshop.repository.ProductRepository;
-import ir.maktab92.onlineshop.util.ArrayUtil;
+
 
 public class BuyBasket {
 
@@ -41,15 +41,65 @@ public class BuyBasket {
     public void removeProduct(Product product) {
         for (int i = 0; i < 5; i++) {
             if (products[i] != null) {
-                if (products[i].getId() == product.getId()) {
-                   productRepository.saveOneProduct(product, database.getTvs());
-                    products[i] = null;
-                    shiftBack(i, products);
-                    System.out.println("remove from buyBasket");
-                    System.out.println("number of your basket product is " + (i - 1));
-                    return;
-
+//                if (products[i].getId() == product.getId()) {
+//                   productRepository.saveOneProduct(product, database.getTvs());
+//                    products[i] = null;
+//                    shiftBack(i, products);
+//                    System.out.println("remove from buyBasket");
+//                    System.out.println("number of your basket product is " + (i - 1));
+//                    return;
+//                }
+                if (products[i] == product) {
+                    if (product instanceof Tv) {
+                        productRepository.saveOneProduct(product, database.getTvs());
+                        products[i] = null;
+                        shiftBack(i, products);
+                        System.out.println("remove from buyBasket");
+                        System.out.println("number of your basket product is " + (i - 1));
+                        return;
+                    }
+                    if (product instanceof Radio) {
+                        productRepository.saveOneProduct(product, database.getRadios());
+                        products[i] = null;
+                        shiftBack(i, products);
+                        System.out.println("remove from buyBasket");
+                        System.out.println("number of your basket product is " + (i - 1));
+                        return;
+                    }
+                    if (product instanceof ShoeCollege) {
+                        productRepository.saveOneProduct(product, database.getShoeColleges());
+                        products[i] = null;
+                        shiftBack(i, products);
+                        System.out.println("remove from buyBasket");
+                        System.out.println("number of your basket product is " + (i - 1));
+                        return;
+                    }
+                    if (product instanceof ShoeSport) {
+                        productRepository.saveOneProduct(product, database.getShoeSports());
+                        products[i] = null;
+                        shiftBack(i, products);
+                        System.out.println("remove from buyBasket");
+                        System.out.println("number of your basket product is " + (i - 1));
+                        return;
+                    }
+                    if (product instanceof Book) {
+                        productRepository.saveOneProduct(product, database.getBooks());
+                        products[i] = null;
+                        shiftBack(i, products);
+                        System.out.println("remove from buyBasket");
+                        System.out.println("number of your basket product is " + (i - 1));
+                        return;
+                    }
+                    if (product instanceof Article) {
+                        productRepository.saveOneProduct(product, database.getArticles());
+                        products[i] = null;
+                        shiftBack(i, products);
+                        System.out.println("remove from buyBasket");
+                        System.out.println("number of your basket product is " + (i - 1));
+                        return;
+                    }
                 }
+
             }
         }
         System.out.println("your product is not found");
