@@ -1,9 +1,7 @@
 package ir.maktab92.onlineshop.repository;
 
 import ir.maktab92.onlineshop.base.domain.Product;
-import ir.maktab92.onlineshop.domain.Radio;
-import ir.maktab92.onlineshop.domain.ShoeCollege;
-import ir.maktab92.onlineshop.domain.Tv;
+import ir.maktab92.onlineshop.domain.*;
 
 import java.util.ArrayList;
 
@@ -40,6 +38,34 @@ public class ProductRepository {
             products = shoeColleges;
             database.setShoeColleges(((ShoeCollege[]) products));
         }
+        if (product instanceof ShoeSport) {
+            ShoeSport[] shoeSports = new ShoeSport[5];
+            ShoeSport shoeSport = (ShoeSport) product;
+            for (int i = 0; i < products.length; i++) {
+                shoeSports[i] = shoeSport;
+            }
+            products = shoeSports;
+            database.setShoeSports(((ShoeSport[]) products));
+        }
+        if (product instanceof Book) {
+            Book[] books = new Book[5];
+            Book book = (Book) product;
+            for (int i = 0; i < products.length; i++) {
+                books[i] = book;
+            }
+            products = books;
+            database.setBooks(((Book[]) products));
+        }
+        if (product instanceof Article) {
+            Article[] articles = new Article[5];
+            Article article = (Article) product;
+            for (int i = 0; i < products.length; i++) {
+                articles[i] = article;
+            }
+            products = articles;
+            database.setArticles(((Article[]) products));
+        }
+
 
 
     }

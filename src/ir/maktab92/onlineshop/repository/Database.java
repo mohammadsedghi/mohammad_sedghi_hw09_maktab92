@@ -10,11 +10,11 @@ public class Database {
 
     private static User[] users = new User[DEFAULT_ARRAY_LENGTH];
     private static Tv[] tvs = new Tv[DEFAULT_ARRAY_LENGTH];
-
     private static Radio[] radios = new Radio[DEFAULT_ARRAY_LENGTH];
     private static ShoeSport[] shoeSports = new ShoeSport[DEFAULT_ARRAY_LENGTH];
     private static ShoeCollege[] shoeColleges = new ShoeCollege[DEFAULT_ARRAY_LENGTH];
     private static Book[] books = new Book[DEFAULT_ARRAY_LENGTH];
+    private static Article[]  articles = new Article[DEFAULT_ARRAY_LENGTH];
 
     public static User[] getUsers() {
         return users;
@@ -62,5 +62,13 @@ public class Database {
 
     public static void setBooks(Book[] books) {
         Database.books = books;
+    }
+
+    public static Article[] getArticles() {
+        return articles;
+    }
+
+    public static void setArticles(Article[] articles) {
+        Database.articles = articles;
     }
 }
