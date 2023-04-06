@@ -1,7 +1,7 @@
 package ir.maktab92.onlineshop.base.domain;
 
 public class Product extends Entity {
-    double UnitPrice=0;
+   protected double UnitPrice=0;
     public double getUnitPrice() {
         return UnitPrice;
     }
@@ -15,5 +15,12 @@ public class Product extends Entity {
     }
 
     public Product() {
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "UnitPrice=" + UnitPrice +
+                "} " + super.toString();
     }
 }

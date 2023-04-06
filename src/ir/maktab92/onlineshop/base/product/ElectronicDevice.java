@@ -5,8 +5,8 @@ import ir.maktab92.onlineshop.base.domain.Product;
 
 public class ElectronicDevice extends Product {
 
-    String name;
-    int voltage;
+   protected String name;
+   protected int voltage;
 
 
     public ElectronicDevice(long id, double unitPrice, String name, int voltage) {
@@ -36,7 +36,13 @@ public class ElectronicDevice extends Product {
         this.voltage = voltage;
     }
 
-
+    @Override
+    public String toString() {
+        return "ElectronicDevice{" +
+                "name='" + name + '\'' +
+                ", voltage=" + voltage +
+                "} " + super.toString();
+    }
 }
 
 

@@ -19,5 +19,10 @@ public class Entity {
     public Entity() {
     }
 
-
+    @Override
+    public String toString() {
+        return "Entity{" +
+                "id=" + id +
+                '}';
+    }
 }
